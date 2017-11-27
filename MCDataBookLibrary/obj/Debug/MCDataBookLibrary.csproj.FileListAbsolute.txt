@@ -1,0 +1,13 @@
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\bin\Debug\MCDataBookLibrary.dll.config
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\bin\Debug\MCDataBookLibrary.dll
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\bin\Debug\MCDataBookLibrary.pdb
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\bin\Debug\EntityFramework.dll
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\bin\Debug\EntityFramework.xml
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.csproj.CoreCompileInputs.cache
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.dll
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.pdb
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.csprojResolveAssemblyReference.cache
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.Migrations.MyMigration14.resources
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.csproj.GenerateResource.Cache
