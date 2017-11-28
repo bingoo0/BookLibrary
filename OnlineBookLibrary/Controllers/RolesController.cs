@@ -11,13 +11,14 @@ using System.Web.Mvc;
 
 namespace OnlineBookLibrary.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RolesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Role
         public ActionResult Index()
         {
-            IEnumerable<IdentityRole> roles = db.Roles.ToList();
+           var roles = db.Roles.ToList();
 
             return View(roles);
         }

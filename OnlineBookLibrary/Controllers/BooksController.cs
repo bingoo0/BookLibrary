@@ -52,6 +52,7 @@ namespace OnlineBookLibrary.Controllers
         }
 
         // GET: Books/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -67,6 +68,7 @@ namespace OnlineBookLibrary.Controllers
         }
 
         // GET: Books/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
 
@@ -81,6 +83,7 @@ namespace OnlineBookLibrary.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Create([Bind(Include = "bookId,Title,ReleaseDate,AuthorId,WriterId,GenreId,Description")] Book book)
         {
             if (ModelState.IsValid)
@@ -98,6 +101,7 @@ namespace OnlineBookLibrary.Controllers
         }
 
         // GET: Books/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -121,6 +125,7 @@ namespace OnlineBookLibrary.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "bookId,Title,ReleaseDate,AuthorId,WriterId,GenreId,Description")] Book book)
         {
             if (ModelState.IsValid)
@@ -137,6 +142,7 @@ namespace OnlineBookLibrary.Controllers
         }
 
         // GET: Books/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -154,6 +160,7 @@ namespace OnlineBookLibrary.Controllers
         // POST: Books/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Book book = db.Books.Find(id);

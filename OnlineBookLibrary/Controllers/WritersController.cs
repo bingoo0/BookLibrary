@@ -11,6 +11,7 @@ using MCDataBookLibrary.Entities;
 
 namespace OnlineBookLibrary.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class WritersController : Controller
     {
         private LibraryDbContext db = new LibraryDbContext();
