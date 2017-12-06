@@ -11,3 +11,4 @@ C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCData
 C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.csprojResolveAssemblyReference.cache
 C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.Migrations.MyMigration14.resources
 C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.csproj.GenerateResource.Cache
+C:\Users\mehme\OneDrive\Documents\Visual Studio 2017\Projects\BookLibrary\MCDataBookLibrary\obj\Debug\MCDataBookLibrary.Migrations.NewMigration.resources

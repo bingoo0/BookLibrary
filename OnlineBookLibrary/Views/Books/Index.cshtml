@@ -9,7 +9,8 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Create New", "Create")
+
 </p>
 <hr />
 @using (Html.BeginForm())
@@ -46,6 +47,9 @@
             @Html.DisplayNameFor(model => model.Genre)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th></th>
@@ -68,6 +72,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Genre.GenreName)
         </td>
+        <th>
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
         </td>

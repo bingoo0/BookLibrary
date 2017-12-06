@@ -50,10 +50,15 @@
     <Compile Include="Context\LibraryDbContext.cs" />
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\Genre.cs" />
+    <Compile Include="Entities\Pictures.cs" />
     <Compile Include="Entities\Writer.cs" />
     <Compile Include="Migrations\201711231756169_MyMigration14.cs" />
     <Compile Include="Migrations\201711231756169_MyMigration14.Designer.cs">
       <DependentUpon>201711231756169_MyMigration14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711300643337_NewMigration.cs" />
+    <Compile Include="Migrations\201711300643337_NewMigration.Designer.cs">
+      <DependentUpon>201711300643337_NewMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +70,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201711231756169_MyMigration14.resx">
       <DependentUpon>201711231756169_MyMigration14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711300643337_NewMigration.resx">
+      <DependentUpon>201711300643337_NewMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

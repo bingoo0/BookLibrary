@@ -30,7 +30,11 @@ namespace MCDataBookLibrary.Entities
 
         [Display(Name = "Genre")]
         public int? GenreId { get; set; }
-        public virtual Genre Genre { get; set; }               
+        public virtual Genre Genre { get; set; }
+
+        [Display(Name = "Pictures")]
+        public int? PictureId { get; set; }
+        public virtual Pictures Picture { get; set; }
 
         [StringLength(500, MinimumLength = 1)]
         public string Description { get; set; }

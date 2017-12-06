@@ -17,7 +17,7 @@ namespace OnlineBookLibrary.Controllers
         private LibraryDbContext db = new LibraryDbContext();
 
         // GET: Books
-        public ActionResult Index(int? page, string titleSearch, string sortOrder)
+        public ActionResult Index(int? page, string titleSearch, string sortOrder, string genreSearch)
         {
             int pageNumber = page ?? 1;
             int pageSize = 5;
@@ -29,6 +29,14 @@ namespace OnlineBookLibrary.Controllers
             {
                 books = books.Where(x => x.Title.Contains(titleSearch));
             }
+
+            ViewBag.GenreId = genreSearch;
+
+            if (!String.IsNullOrEmpty(genreSearch))
+            {
+                books = books.Where(x => x.Genre.Id.ToString().Contains(genreSearch));
+            }
+
             ViewBag.CurrentSortParm = sortOrder;
             ViewBag.TitleSortParm = String.IsNullOrEmpty(sortOrder) ? "title_desc" : "";
             ViewBag.WriterSortParm = sortOrder == "writer_asc" ? "writer_desc" : "writer_asc";
@@ -74,7 +82,8 @@ namespace OnlineBookLibrary.Controllers
 
             ViewBag.Writers = new SelectList(db.Writers, "Id", "FirstName");
             ViewBag.Genres = new SelectList(db.Genres, "Id", "GenreName");
-           
+            ViewBag.Pictures = new SelectList(db.Pictures, "Id", "Name");
+
             return View();
         }
 
@@ -84,7 +93,7 @@ namespace OnlineBookLibrary.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Create([Bind(Include = "bookId,Title,ReleaseDate,AuthorId,WriterId,GenreId,Description")] Book book)
+        public ActionResult Create([Bind(Include = "bookId,Title,ReleaseDate,AuthorId,WriterId,GenreId,PictureId,Description")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -96,6 +105,7 @@ namespace OnlineBookLibrary.Controllers
 
             ViewBag.Writers = new SelectList(db.Writers, "Id", "FirstName");
             ViewBag.Genres = new SelectList(db.Genres, "Id", "GenreName");
+            ViewBag.Pictures = new SelectList(db.Pictures, "Id", "Name");
 
             return View(book);
         }
@@ -116,6 +126,7 @@ namespace OnlineBookLibrary.Controllers
 
             ViewBag.Writers = new SelectList(db.Writers, "Id", "FirstName");
             ViewBag.Genres = new SelectList(db.Genres, "Id", "GenreName");
+            ViewBag.Pictures = new SelectList(db.Pictures, "Id", "Name");
 
             return View(book);
         }
@@ -126,7 +137,7 @@ namespace OnlineBookLibrary.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Edit([Bind(Include = "bookId,Title,ReleaseDate,AuthorId,WriterId,GenreId,Description")] Book book)
+        public ActionResult Edit([Bind(Include = "bookId,Title,ReleaseDate,AuthorId,WriterId,GenreId,PictureId,Description")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -137,6 +148,7 @@ namespace OnlineBookLibrary.Controllers
 
             ViewBag.Writers = new SelectList(db.Writers, "Id", "FirstName");
             ViewBag.Genres = new SelectList(db.Genres, "Id", "GenreName");
+            ViewBag.Pictures = new SelectList(db.Pictures, "Id", "Name");
 
             return View(book);
         }
